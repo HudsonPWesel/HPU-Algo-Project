@@ -1,11 +1,13 @@
+//Time complexity: O(n^2) 
 #include<iostream>
 using namespace std;
 
-void selectionsort(int n, int S[]) {
+void selectionsort(int n, int S[], int& comparisons) {
     int i, j, smallest, temp;
     for (i = 0; i < n - 1; i++) {
         smallest = i;
         for (j = i + 1; j < n; j++) {
+            comparisons++; // Increment comparison counter
             if (S[j] < S[smallest]) {
                 smallest = j;
             }
@@ -20,21 +22,27 @@ void selectionsort(int n, int S[]) {
 int main() {
     int n = 6;
     int arr[] = {64, 25, 12, 22, 11, 7};
-    
+    int comparisons = 0;
+
     cout << "Original Array" << endl;
     for (int i = 0; i < n; i++) {
         cout <<  arr[i] << " ";
     }
-        cout << endl;
-    
+    cout << endl;
+
     // calls the selection sort function
-    selectionsort(n, arr);
+    selectionsort(n, arr, comparisons);
     // Print the sorted array
-    
+
     cout << "Sorted Array" << endl;
     for (int i = 0; i < n; i++) {
         cout <<  arr[i] << " ";
     }
-        cout << endl;
+    cout << endl;
+
+    cout << "Number of comparisons: " << comparisons << endl;
+
     return 0;
 }
+
+
