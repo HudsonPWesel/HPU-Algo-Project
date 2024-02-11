@@ -13,6 +13,12 @@ void bubbleSort(int S[], int n, int& comparisons) {
                 S[j + 1] = temp;
             }
         }
+        // Print array after each pass
+        cout << "Array after pass " << i + 1 << ": ";
+        for (int k = 0; k < n; k++) {
+            cout << S[k] << " ";
+        }
+        cout << endl;
     }
 }
 
@@ -42,4 +48,3 @@ int main() {
 
     return 0;
 }
-
