@@ -1,6 +1,6 @@
-#ifndef MSORT_H
-#define MSORT_H
+#ifndef MERGESORT_H
+#define MERGESORT_H
 
-void msort(int sizeBig, int bigArray[], bool ascending);
+void mergesort(int sizeBig, int bigArray[], bool ascending, int &counter);
 
 #endif
