@@ -18,12 +18,12 @@ bool checkIsHeap(int heap [], int heapSize){
         int rightChildIndex  = (2 * i) + 2;
         bool hasChildLeft = !(leftChildIndex >= heapSize);
         bool hasChildRight = !(rightChildIndex >= heapSize);
+    
 
-
-        //     std::cout << "Current:" << heap[i] << " Left: " << heap[leftChildIndex] << " Right: " << heap[rightChildIndex] << std::endl;
+   //     std::cout << "Current:" << heap[i] << " Left: " << heap[leftChildIndex] << " Right: " << heap[rightChildIndex] << std::endl;
         if(((heap[i] > largest && i !=0)) || hasChildLeft && heap[i] < heap[leftChildIndex] || hasChildRight && heap[i] < heap[rightChildIndex] ){
-            std::cout << "Not a heap" << std::endl;
-            return false;
+             std::cout << "Not a heap" << std::endl;
+                return false;
         }
     }
     return true;
@@ -72,8 +72,8 @@ int main (int argc, char *argv[]) {
     //  In order for heapsort to work, we must START with a heap.
     // swap, chop, and heapify
     int intHeap [8] {75,80,60,68,55,40,52,67};
-
+    
     myheapsort(intHeap, 7);
-    std::cout << std::endl;
+     std::cout << std::endl;
 
 }
