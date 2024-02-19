@@ -1,7 +1,7 @@
 // adrian zeni
 
 using namespace std;
-
+#include "quickSort.h"
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -59,6 +59,7 @@ void swap(int a, int b)
 }
 
 // testing to prove it works
+/*
 int main()
 {
     int array[SIZE];
@@ -80,3 +81,4 @@ int main()
 
     return 0;
 }
+*/
