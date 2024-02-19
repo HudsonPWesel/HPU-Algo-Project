@@ -23,6 +23,13 @@ void bubbleSort(int S[], int n, int& comparisons) {
                 isSorted = false; // Set the flag to false if a swap occurred
             }
         }
+
+        // Print array after each pass
+        cout << "Pass " << i + 1 << ": ";
+        for (int k = 0; k < n; k++) {
+            cout << S[k] << " ";
+        }
+        cout << endl;
     }
 }
 
@@ -156,4 +163,3 @@ int main() {
 
     return 0;
 }
-
