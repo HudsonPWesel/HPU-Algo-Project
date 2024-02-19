@@ -1,0 +1,9 @@
+{
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ],
+    "files.associations": {
+        "insertion sort": "cpp",
+        "selectionsort": "cpp"
+    }
+}
