@@ -64,16 +64,4 @@ void myheapsort(int heap [], int lastHeapIndex){
 
 }
 
-int main (int argc, char *argv[]) {
-    // left child = 2i + 1
-    // right child = 2i + 2
-    // parent = floor((i - 1) / 2)  )
-    // In the case of a max heap, the largest element is at the root, and for a min-heap, the smallest element is at the root.
-    //  In order for heapsort to work, we must START with a heap.
-    // swap, chop, and heapify
-    int intHeap [8] {75,80,60,68,55,40,52,67};
-    
-    myheapsort(intHeap, 7);
-     std::cout << std::endl;
 
-}
