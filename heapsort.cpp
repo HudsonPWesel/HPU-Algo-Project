@@ -46,7 +46,7 @@ void heapify(int heap [], int lastHeapIndex, long long &counter){
 
 }
 
-void myheapsort(int heap [], int lastHeapIndex, int &counter){
+void myheapsort(int heap [], int lastHeapIndex, long long &counter){
     // Ensure that inputed data is heap
     heapify(heap,lastHeapIndex, counter);
 
