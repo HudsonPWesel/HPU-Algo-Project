@@ -6,7 +6,7 @@ using namespace std;
 #include <cmath>
 #include <random>
 
-const int SIZE = 10;
+// const int SIZE = 10;
 
 // partition and return index
 int partition(int array[], int low, int high, int &counter)
