@@ -29,7 +29,7 @@ int partition(int array[], int low, int high, int &counter)
 }
 
 // actual recursive quicksort
-void quickSort(int array[], int low, int high, bool ascending, int &counter)
+void quickSort(int array[], int low, int high, int &counter)
 {
     if (low < high)
     {
