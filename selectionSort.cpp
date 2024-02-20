@@ -1,3 +1,4 @@
+#include "selectionsort.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -5,6 +6,7 @@
 
 using namespace std;
 
+/*
 // Function to generate a sorted array followed by a reverse sorted array
 void generateReverseSortedArray(long long n, long long arr[]) {
     for (long long i = n / 2, j = n - 1; i < n; i++, j--) {
@@ -45,14 +47,14 @@ void generateRandomArray(long long n, long long arr[]) {
         arr[i] = rand() % 1000; // Fill array with random numbers from 0 to 999
     }
 }
+*/
 
 // Selection sort function
-void selectionsort(long long n, long long S[], long long& comparisons, bool ascending = true) {
-    long long i, j, smallest, temp;
+void selectionsort(int n, int S[], long long& comparisons, bool ascending) {
+    int i, j, smallest, temp;
     for (i = 0; i < n - 1; i++) {
         smallest = i;
         for (j = i + 1; j < n; j++) {
-            comparisons++; // Increment comparison counter
             if ((ascending && S[j] < S[smallest]) || (!ascending && S[j] > S[smallest])) {
                 smallest = j;
             }
@@ -60,17 +62,20 @@ void selectionsort(long long n, long long S[], long long& comparisons, bool asce
         // Swap S[i] and S[smallest]
         temp = S[i];
         S[i] = S[smallest];
+        comparisons++; // Increment comparison counter
         S[smallest] = temp;
-
+        comparisons++; // Increment comparison counter
+/*
         // Print array after each pass
         cout << "Array after pass " << i + 1 << ": ";
-        for (long long k = 0; k < n; k++) {
+        for (int k = 0; k < n; k++) {
             cout << S[k] << " ";
         }
         cout << endl;
+*/
     }
 }
-
+/*
 // Function to print an array
 void printArray(long long arr[], long long n) {
     // Print the generated reverse sorted array
@@ -179,4 +184,4 @@ int main() {
 
     return 0;
 }
-
+*/
