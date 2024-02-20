@@ -4,13 +4,12 @@ using namespace std;
 #include "quickSort.h"
 #include <iostream>
 #include <cmath>
-#include <vector>
 #include <random>
 
 const int SIZE = 10;
 
 // partition and return index
-int partition(int array[], int low, int high)
+int partition(int array[], int low, int high, int &counter)
 {
     int pivot = array[high];
     int i = low - 1;
@@ -22,6 +21,7 @@ int partition(int array[], int low, int high)
             i++;
             swap(array[i], array[j]);
         }
+        counter++;
     }
     swap(array[i + 1], array[high]);
     i += 1;
@@ -29,13 +29,13 @@ int partition(int array[], int low, int high)
 }
 
 // actual recursive quicksort
-void quickSort(int array[], int low, int high)
+void quickSort(int array[], int low, int high, bool ascending, int &counter)
 {
     if (low < high)
     {
-        int pivot = partition(array, low, high);
-        quickSort(array, low, pivot - 1);
-        quickSort(array, pivot + 1, high);
+        int pivot = partition(array, low, high, counter);
+        quickSort(array, low, pivot - 1, ascending, counter);
+        quickSort(array, pivot + 1, high, ascending, counter);
     }
 }
 
