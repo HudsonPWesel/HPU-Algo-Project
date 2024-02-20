@@ -7,13 +7,12 @@
 // Based on algorithm 2.2 and 2.3 from the textbook
 #include "mergesort.h"
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
 // merge function
 // gets passed arrays and sizes of arrays, as well as ascending boolean and counter
-void merge(int sizeLeft, int sizeRight, int sizeBig, int leftArray[], int rightArray[], int bigArray[], bool ascending, int &counter){
+void merge(int sizeLeft, int sizeRight, int sizeBig, int leftArray[], int rightArray[], int bigArray[], bool ascending, long long &counter){
   // declare variables needed to merge arrays
   int bigIndex = 0;
   int leftIndex = 0;
@@ -57,7 +56,7 @@ void merge(int sizeLeft, int sizeRight, int sizeBig, int leftArray[], int rightA
 
 // merge sort
 // counter goes up for every write to main array
-void mergesort(int sizeBig, int bigArray[], bool ascending, int &counter){
+void mergesort(int sizeBig, int bigArray[], bool ascending, long long &counter){
   // base case is array size of 1
   if(sizeBig > 1){
     // create two arrays to hold half of bigArray each

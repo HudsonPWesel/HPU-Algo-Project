@@ -9,7 +9,7 @@ using namespace std;
 // const int SIZE = 10;
 
 // partition and return index
-int partition(int array[], int low, int high, int &counter)
+int partition(int array[], int low, int high, long long &counter)
 {
     int pivot = array[high];
     int i = low - 1;
@@ -29,16 +29,16 @@ int partition(int array[], int low, int high, int &counter)
 }
 
 // actual recursive quicksort
-void quickSort(int array[], int low, int high, int &counter)
+void quickSort(int array[], int low, int high, long long &counter)
 {
     if (low < high)
     {
         int pivot = partition(array, low, high, counter);
-        quickSort(array, low, pivot - 1, ascending, counter);
-        quickSort(array, pivot + 1, high, ascending, counter);
+        quickSort(array, low, pivot - 1, counter);
+        quickSort(array, pivot + 1, high, counter);
     }
 }
-
+/*
 // array printer
 void printArray(int array[])
 {
