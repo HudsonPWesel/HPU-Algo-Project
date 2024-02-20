@@ -30,7 +30,7 @@ bool checkIsHeap(int heap [], int heapSize){
 
 }
 // MAX HEAP
-void heapify(int heap [], int lastHeapIndex, int &counter){
+void heapify(int heap [], int lastHeapIndex, long long &counter){
     for(int i = 0; i <= lastHeapIndex; i++){
         int parentIndex = std::floor(((i - 1) / 2));
         int tempIndex = i;
