@@ -1,3 +1,4 @@
+#include "bubblesort.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -6,39 +7,40 @@
 using namespace std;
 
 // Bubble sort function
-void bubbleSort(long long S[], long long n, long long& comparisons, bool ascending = true) {
+void bubbleSort(int S[], int n, long long& comparisons, bool ascending) {
     bool isSorted = false; // Flag to check if the array is sorted
 
-    for (long long i = 0; i < n - 1 && !isSorted; i++) {
+    for (int i = 0; i < n - 1 && !isSorted; i++) {
         isSorted = true; // Assume array is sorted
 
-        for (long long j = 0; j < n - i - 1; j++) {
-            comparisons++; // Increment comparison counter
+        for (int j = 0; j < n - i - 1; j++) {
             if (ascending ? (S[j] > S[j + 1]) : (S[j] < S[j + 1])) {
                 // Exchange S[j] and S[j + 1]
-                long long temp = S[j];
+                int temp = S[j];
                 S[j] = S[j + 1];
+                comparisons++; // Increment comparison counter
                 S[j + 1] = temp;
+                comparisons++; // Increment comparison counter
                 isSorted = false; // Set the flag to false if a swap occurred
             }
         }
 
         // Print array after each pass
-        cout << "Pass " << i + 1 << ": ";
+        /*cout << "Pass " << i + 1 << ": ";
         if(isSorted){
-            for (long long k = 0; k < n; k++) {
+            for (int k = 0; k < n; k++) {
                 cout << S[k] << " ";
             }
         }
         else{
-            for(long long k = n - 1; k >= 0; k--){
+            for(int k = n - 1; k >= 0; k--){
                 cout << S[k] << " "; 
             }
         }
-        cout << endl;
+        cout << endl; */
     }
 }
-
+/*
 // Function to generate a randomly distributed array
 void generateRandomArray(long long arr[], long long n) {
     for (long long i = 0; i < n; i++) {
@@ -165,4 +167,4 @@ int main() {
 
     return 0;
 }
-
+*/

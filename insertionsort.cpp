@@ -1,50 +1,69 @@
-//Time complexity: O(n^2) is worst case 
-// Best Case: O(n) 
 #include <iostream>
-#include <vector>
+#include <random>
+#include <algorithm>
+#include "insertionsort.h"
 
 using namespace std;
 
-void insertionSort(vector<int>& arr, int& comparisons) {
-    int n = arr.size();
-    for (int i = 1; i < n; i++) {
-        int x = arr[i];
-        int j = i - 1;
-        while (j >= 0 && arr[j] > x) {
+// Insertion Sort Algorithm
+void insertionSort(int arr[], int size, long long& compares) {
+    // bool issorted; 
+    for (int n = 1; n < size; n++) {
+        int key = arr[n];
+        int j = n - 1;
+
+        while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
+            compares++;
             j--;
-            comparisons++; // Increment comparison counter
         }
-        arr[j + 1] = x;
-        
-        // Print array after each pass
-        cout << "Array after pass " << i << ": ";
-        for (int k = 0; k < n; k++) {
-            cout << arr[k] << " ";
-        }
-        cout << endl;
+
+        arr[j + 1] = key;
+	compares++;
+/*        if (j + 1 != n) {
+            issorted = false;
+        } */
     }
 }
 
-int main() {
-    vector<int> arr = {12, 11, 13, 5, 6};
-    int comparisons = 0;
+// Random 
+void RandomDataset(int arr[], int size) {
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dis(1, size * 10);
 
-    cout << "Original array is: ";
-    for (int i = 0; i < arr.size(); i++) {
-        cout << arr[i] << " ";
+    for (int n = 0; n < size; n++) {
+        arr[n] = dis(gen);
     }
-    cout << endl;
-
-    insertionSort(arr, comparisons);
-
-    cout << "Sorted array is: ";
-    for (int i = 0; i < arr.size(); i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
-    cout << "Number of comparisons: " << comparisons << endl;
-
-    return 0;
 }
+
+// Almost Sorted
+void AlmostSortedDataset(int arr[], int size) {
+    RandomDataset(arr, size);
+    for (int n = 0; n < size / 10; n++) {
+        int index1 = rand() % size;
+        int index2 = rand() % size;
+        swap(arr[index1], arr[index2]);
+    }
+}
+
+// Reverse Sorted
+void ReverseSortedDataset(int arr[], int size) {
+    RandomDataset(arr, size);
+    sort(arr, arr + size, greater<int>());
+}
+
+// With Duplicates
+void DatasetWithDuplicates(int arr[], int size) {
+    for (int n = 0; n < size / 2; n++) {
+        arr[n] = n + 1;
+        arr[n + size / 2] = n + 1;
+    }
+    random_shuffle(arr, arr + size);
+}
+
+
+
+
+
+

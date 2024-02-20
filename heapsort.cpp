@@ -30,13 +30,14 @@ bool checkIsHeap(int heap [], int heapSize){
 
 }
 // MAX HEAP
-void heapify(int heap [], int lastHeapIndex){
-    for(int i = 0; i <= lastHeapIndex; i++){
-        int parentIndex = std::floor(((i - 1) / 2));
+void heapify(int heap [], int lastHeapIndex, long long &counter){
+    for(int i = 1; i <= lastHeapIndex; i++){
+        int parentIndex = (i - 1) / 2;
         int tempIndex = i;
 
         while(heap[tempIndex] > heap[parentIndex]){
             myswap(heap, tempIndex, parentIndex);
+            counter+=2;
             tempIndex = parentIndex;
             parentIndex = std::floor((tempIndex - 1) / 2);
         }
@@ -45,20 +46,15 @@ void heapify(int heap [], int lastHeapIndex){
 
 }
 
-void myheapsort(int heap [], int lastHeapIndex){
-    heapify(heap,lastHeapIndex);
-    for(int i = 0; i < 8; i++){
-        std::cout << heap[i] << " ";
-    }
+void myheapsort(int heap [], int lastHeapIndex, long long &counter){
+    // Ensure that inputed data is heap
+    heapify(heap,lastHeapIndex, counter);
+
     while(lastHeapIndex > 0){
         myswap(heap, 0, lastHeapIndex);
+        counter+=2;
         lastHeapIndex -= 1;
-        std::cout << "Last Heap Index: " << lastHeapIndex << std::endl;
-        heapify(heap,lastHeapIndex);
-        for(int i = 0; i < 8; i++){
-            std::cout << heap[i] << " ";
-        }
-        std::cout << std::endl;
+        heapify(heap,lastHeapIndex, counter);
     }
 
 
