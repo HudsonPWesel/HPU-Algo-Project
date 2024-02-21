@@ -21,7 +21,7 @@ bool checkIsHeap(int heap [], int heapSize){
 
    //     std::cout << "Current:" << heap[i] << " Left: " << heap[leftChildIndex] << " Right: " << heap[rightChildIndex] << std::endl;
         if(((heap[i] > largest && i !=0)) || hasChildLeft && heap[i] < heap[leftChildIndex] || hasChildRight && heap[i] < heap[rightChildIndex] ){
-             std::cout << "Not a heap" << std::endl;
+   //          std::cout << "Not a heap" << std::endl;
                 return false;
         }
     }
@@ -52,7 +52,7 @@ void myheapsort(int heap [], int lastHeapIndex, long long &counter){
         myswap(heap, 0, lastHeapIndex, counter);
         lastHeapIndex -= 1;
         heapify(heap,lastHeapIndex, counter);
-        std::cout << lastHeapIndex << " " << std::endl;
+//        std::cout << lastHeapIndex << " " << std::endl;
         
     }
 
