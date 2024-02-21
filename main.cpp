@@ -1,5 +1,6 @@
+#include <random>
+#include <cstdlib>
 #include <iostream>
-#include <experimental/random>
 #include <chrono>
 #include "mergesort.cpp"
 #include "bubblesort.cpp"
@@ -32,19 +33,25 @@ void checkSort(const int SIZE, const int oldArray[], const int newArray[], const
 }
 
 void generateRandomArray(int SIZE, int oldArray[], int newArray[]){
+  random_device rd;
+  mt19937 rng(rd());
+  uniform_int_distribution<mt19937::result_type> dist(1, 100);
   int newItem;
   for(int i = 0; i < SIZE; i++){
-    newItem = experimental::randint(1, 100);
+    newItem = dist(rng);
     oldArray[i] = newItem;
     newArray[i] = newItem;
   }
 }
 
 void generateAlmostSortedArray(int SIZE, int oldArray[], int newArray[]){
+  random_device rd;
+  mt19937 rng(rd());
+  uniform_int_distribution<mt19937::result_type> dist(1, 100);
   int newItem;
   int tempItem;
   for(int i = 0; i < SIZE; i++){
-    newItem = experimental::randint(1, 100);
+    newItem = dist(rng);
     oldArray[i] = newItem;
   }
   long long *counter = new long long;
@@ -73,7 +80,10 @@ void generateSortedArray(int SIZE, int oldArray[], int newArray[], bool ASCENDIN
 }
 
 void generateDuplicatesArray(int SIZE, int oldArray[], int newArray[]){
-  int duplicate = experimental::randint(1, 100);
+  random_device rd;
+  mt19937 rng(rd());
+  uniform_int_distribution<mt19937::result_type> dist(1, 100);
+  int duplicate = dist(rng);
   int rand;
   for(int i = 0; i < SIZE; i++){
     if(i < SIZE/2){
@@ -81,7 +91,7 @@ void generateDuplicatesArray(int SIZE, int oldArray[], int newArray[]){
       newArray[i] = duplicate;
     }
     else{
-      rand = experimental::randint(1, 100);
+      rand = dist(rng);
       oldArray[i] = rand;
       newArray[i] = rand;
     }
@@ -90,7 +100,7 @@ void generateDuplicatesArray(int SIZE, int oldArray[], int newArray[]){
 
 int main(){
   // declare constants
-  int SIZE = 10000;
+  int SIZE = 100;
   bool ASCENDING = true;
   // declare variables
   int oldArray[SIZE];
