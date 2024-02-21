@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <cmath>
 
 
@@ -32,7 +31,7 @@ bool checkIsHeap(int heap [], int heapSize){
 }
 // MAX HEAP
 void heapify(int heap [], int lastHeapIndex, long long &counter){
-    for(int i = 0; i < lastHeapIndex; i++){
+    for(int i = 0; i <= lastHeapIndex; i++){
         int parentIndex = ((i - 1) / 2);
         int tempIndex = i;
 
