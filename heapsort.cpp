@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 
-
 void myswap(int heap [], int i, int j, long long &counter){
     int temp = heap[i];
     heap[i] = heap[j];
@@ -31,14 +30,14 @@ bool checkIsHeap(int heap [], int heapSize){
 }
 // MAX HEAP
 void heapify(int heap [], int lastHeapIndex, long long &counter){
-    for(int i = 0; i <= lastHeapIndex; i++){
-        int parentIndex = ((i - 1) / 2);
+    for(int i = 1; i <= lastHeapIndex; i++){
+        int parentIndex = std::floor((i - 1) / 2);
         int tempIndex = i;
 
         while(heap[tempIndex] > heap[parentIndex]){
             myswap(heap, tempIndex, parentIndex, counter);
             tempIndex = parentIndex;
-            parentIndex = ((tempIndex - 1) / 2);
+            parentIndex = std::floor((tempIndex - 1) / 2);
         }
 
     }
@@ -53,9 +52,12 @@ void myheapsort(int heap [], int lastHeapIndex, long long &counter){
         myswap(heap, 0, lastHeapIndex, counter);
         lastHeapIndex -= 1;
         heapify(heap,lastHeapIndex, counter);
+        std::cout << lastHeapIndex << " " << std::endl;
+        
     }
 
 }
+
 
 
 
