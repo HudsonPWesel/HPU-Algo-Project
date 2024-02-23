@@ -19,7 +19,6 @@ void insertionSort(int arr[], int size, long long& compares) {
         }
 
         arr[j + 1] = key;
-	compares++;
 /*        if (j + 1 != n) {
             issorted = false;
         } */
