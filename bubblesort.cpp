@@ -18,7 +18,6 @@ void bubbleSort(int S[], int n, long long& comparisons, bool ascending) {
                 // Exchange S[j] and S[j + 1]
                 int temp = S[j];
                 S[j] = S[j + 1];
-                comparisons++; // Increment comparison counter
                 S[j + 1] = temp;
                 comparisons++; // Increment comparison counter
                 isSorted = false; // Set the flag to false if a swap occurred
