@@ -38,3 +38,47 @@ void quickSort(int array[], int low, int high, long long &counter)
         quickSort(array, pivot + 1, high, counter);
     }
 }
+/*
+// array printer
+void printArray(int array[])
+{
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
+
+// swap 2 ints
+void swap(int a, int b)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+// testing to prove it works
+/*
+int main()
+{
+    int array[SIZE];
+    srand(123);
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        array[i] = (rand() % 100);
+    }
+
+    cout << "Generated array: ";
+    printArray(array);
+
+    // sort
+    quickSort(array, 0, SIZE - 1);
+
+    cout << "Sorted array: ";
+    printArray(array);
+
+    return 0;
+}
+*/
