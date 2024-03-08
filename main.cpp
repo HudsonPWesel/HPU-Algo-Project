@@ -214,538 +214,538 @@ int main(){
   checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
 
   cout<<"Bubble sort results"<<endl<<"-------------------"<<endl<<endl;
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  BUBBLE SORT
-  RANDOM ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  bubbleSort(newArray, SIZE, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Random array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  BUBBLE SORT
-  ALMOST SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateAlmostSortedArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  bubbleSort(newArray, SIZE, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Almost sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  BUBBLE SORT
-  SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  bubbleSort(newArray, SIZE, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  BUBBLE SORT
-  REVERSE SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  bubbleSort(newArray, SIZE, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Reverse sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  BUBBLE SORT
-  DUPLICATES ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateDuplicatesArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  bubbleSort(newArray, SIZE, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Duplicates array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // BUBBLE SORT
+ // RANDOM ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // bubbleSort(newArray, SIZE, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Random array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // BUBBLE SORT
+ // ALMOST SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateAlmostSortedArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // bubbleSort(newArray, SIZE, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Almost sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // BUBBLE SORT
+ // SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // bubbleSort(newArray, SIZE, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // BUBBLE SORT
+ // REVERSE SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // bubbleSort(newArray, SIZE, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Reverse sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // BUBBLE SORT
+ // DUPLICATES ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateDuplicatesArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // bubbleSort(newArray, SIZE, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Duplicates array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
 
 
-  cout<<"Selection sort results"<<endl<<"----------------------"<<endl<<endl;
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  SELECTION SORT
-  RANDOM ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  selectionsort(SIZE, newArray, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Random array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  SELECTION SORT
-  ALMOST SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateAlmostSortedArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  selectionsort(SIZE, newArray, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Almost sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  SELECTION SORT
-  SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  selectionsort(SIZE, newArray, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  SELECTION SORT
-  REVERSE SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  selectionsort(SIZE, newArray, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Reverse sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  SELECTION SORT
-  DUPLICATES ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateDuplicatesArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  selectionsort(SIZE, newArray, *counter, ASCENDING);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Duplicates array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // cout<<"Selection sort results"<<endl<<"----------------------"<<endl<<endl;
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // SELECTION SORT
+ // RANDOM ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // selectionsort(SIZE, newArray, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Random array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // SELECTION SORT
+ // ALMOST SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateAlmostSortedArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // selectionsort(SIZE, newArray, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Almost sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // SELECTION SORT
+ // SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // selectionsort(SIZE, newArray, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // SELECTION SORT
+ // REVERSE SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // selectionsort(SIZE, newArray, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Reverse sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // SELECTION SORT
+ // DUPLICATES ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateDuplicatesArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // selectionsort(SIZE, newArray, *counter, ASCENDING);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Duplicates array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
 
-  cout<<"Insertion sort results"<<endl<<"----------------------"<<endl<<endl;
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  INSERTION SORT
-  RANDOM ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  insertionSort(newArray, SIZE, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Random array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  INSERTION SORT
-  ALMOST SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateAlmostSortedArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  insertionSort(newArray, SIZE, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Almost sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  INSERTION SORT
-  SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  insertionSort(newArray, SIZE, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  INSERTION SORT
-  REVERSE SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  insertionSort(newArray, SIZE, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Reverse sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  INSERTION SORT
-  DUPLICATES ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateDuplicatesArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  insertionSort(newArray, SIZE, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Duplicates array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // cout<<"Insertion sort results"<<endl<<"----------------------"<<endl<<endl;
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // INSERTION SORT
+ // RANDOM ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // insertionSort(newArray, SIZE, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Random array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // INSERTION SORT
+ // ALMOST SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateAlmostSortedArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // insertionSort(newArray, SIZE, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Almost sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // INSERTION SORT
+ // SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // insertionSort(newArray, SIZE, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // INSERTION SORT
+ // REVERSE SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // insertionSort(newArray, SIZE, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Reverse sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // INSERTION SORT
+ // DUPLICATES ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateDuplicatesArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // insertionSort(newArray, SIZE, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Duplicates array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
 
-  cout<<"Quick sort results"<<endl<<"------------------"<<endl<<endl;
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  QUICK SORT
-  RANDOM ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  quickSort(newArray, 0, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Random array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  QUICK SORT
-  ALMOST SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateAlmostSortedArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  quickSort(newArray, 0, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Almost sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  QUICK SORT
-  SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  quickSort(newArray, 0, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  QUICK SORT
-  REVERSE SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  quickSort(newArray, 0, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Reverse sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  QUICK SORT
-  DUPLICATES ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateDuplicatesArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  quickSort(newArray, 0, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Duplicates array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // cout<<"Quick sort results"<<endl<<"------------------"<<endl<<endl;
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // QUICK SORT
+ // RANDOM ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // quickSort(newArray, 0, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Random array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // QUICK SORT
+ // ALMOST SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateAlmostSortedArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // quickSort(newArray, 0, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Almost sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // QUICK SORT
+ // SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // quickSort(newArray, 0, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // QUICK SORT
+ // REVERSE SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // quickSort(newArray, 0, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Reverse sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // QUICK SORT
+ // DUPLICATES ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateDuplicatesArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // quickSort(newArray, 0, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Duplicates array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
 
-  cout<<"Heap sort results"<<endl<<"------------------"<<endl<<endl;
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  HEAP SORT
-  RANDOM ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  myheapsort(newArray, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Random array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  HEAP SORT
-  ALMOST SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateAlmostSortedArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  myheapsort(newArray, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Almost sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  HEAP SORT
-  SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  myheapsort(newArray, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  HEAP SORT
-  REVERSE SORTED ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  myheapsort(newArray, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Reverse sorted array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
-  /*
-  ---------------------
-  -=-=-=-=-=-=-=-=-=-=-
-  HEAP SORT
-  DUPLICATES ARRAY
-  -=-=-=-=-=-=-=-=-=-=-
-  ---------------------
-  */
-  *counter = 0;
-  // add items to arrays
-  generateDuplicatesArray(SIZE, oldArray, newArray);
-  // sort array and time the sort
-  firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
-  myheapsort(newArray, SIZE - 1, *counter);
-  secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
-  secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
-  elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
-  // check array and cout results
-  cout<<"Duplicates array results:"<<endl;
-  checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // cout<<"Heap sort results"<<endl<<"------------------"<<endl<<endl;
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // HEAP SORT
+ // RANDOM ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // myheapsort(newArray, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Random array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // HEAP SORT
+ // ALMOST SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateAlmostSortedArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // myheapsort(newArray, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Almost sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // HEAP SORT
+ // SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // myheapsort(newArray, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // HEAP SORT
+ // REVERSE SORTED ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateSortedArray(SIZE, oldArray, newArray, !ASCENDING);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // myheapsort(newArray, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Reverse sorted array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
+ // /*
+ // ---------------------
+ // -=-=-=-=-=-=-=-=-=-=-
+ // HEAP SORT
+ // DUPLICATES ARRAY
+ // -=-=-=-=-=-=-=-=-=-=-
+ // ---------------------
+ // */
+ // *counter = 0;
+ // // add items to arrays
+ // generateDuplicatesArray(SIZE, oldArray, newArray);
+ // // sort array and time the sort
+ // firstTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // firstTimeMicroseconds = firstTimePoint.time_since_epoch().count();
+ // myheapsort(newArray, SIZE - 1, *counter);
+ // secondTimePoint = chrono::time_point_cast<chrono::microseconds>(chrono::system_clock::now());
+ // secondTimeMicroseconds = secondTimePoint.time_since_epoch().count();
+ // elapsedTimeMicroseconds = secondTimeMicroseconds - firstTimeMicroseconds;
+ // // check array and cout results
+ // cout<<"Duplicates array results:"<<endl;
+ // checkSort(SIZE, oldArray, newArray, ASCENDING, *counter, elapsedTimeMicroseconds);
 }
